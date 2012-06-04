@@ -4,7 +4,7 @@ use Rack::Static,
   # You could also write something like ["index.html", "about_us.html"]
   ###################
 
-  :urls => [/./],
+  :urls => ["images", "css"],
   :root => "public"
 
 run lambda { |env|
