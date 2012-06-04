@@ -22,7 +22,7 @@
 				autoplay				:	1,		//Slideshow starts playing automatically
 				start_slide             :   1,		//Start slide (0 is random)
 				random					: 	0,		//Randomize slide order (Ignores start slide)
-				slide_interval          :   10000,	//Length between transitions
+				slide_interval          :   7000,	//Length between transitions
 				transition              :   6, 		//0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 				transition_speed		:	750,	//Speed of transition
 				new_window				:	1,		//Image links open in new window/tab
@@ -52,15 +52,11 @@
 				user					:	'68273482@N07',				//Flickr user ID (http://idgettr.com/)
 				group					:	'######', 				//Flickr group ID (http://idgettr.com/)
 				tags			: 'abotoli.com',    //Comma separated tags
-				total_slides			:	100,					//How many pictures to pull (Between 1-500)
+				total_slides			:	500,					//How many pictures to pull (Between 1-500)
 				image_size              :   'z', 					//Flickr Image Size - t,s,m,z,b  (Details: http://www.flickr.com/services/api/misc.urls.html)
 				sort_by			:    1,		//1-Date Posted, 2-Date Taken, 3-Interestingness
 				sort_direction		:    0,		//0-descending, 1-ascending
 				
-				/**
-	    		FLICKR API KEY
-	    		NEED TO GET YOUR OWN -- http://www.flickr.com/services/apps/create/
-	    		**/
 				api_key					:	'961bf593e73a92a250e83d11c6b30530'		//Flickr API Key
 					
 			}); 
@@ -69,15 +65,15 @@
 	</script>
 	
 	<style type="text/css">
-		
-			/*Demo Styles*/
-			p{ padding:0 30px 30px 30px; color:#fff; font:11pt "Helvetica Neue", "Helvetica", Arial, sans-serif; text-shadow: #000 0px 1px 0px; line-height:200%; }
-				p a{ font-size:10pt; text-decoration:none; outline: none; color:#ddd; background:#222; border-top:1px solid #333; padding:5px 8px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; -moz-box-shadow: 0px 1px 1px #000; -webkit-box-shadow: 0px 1px 1px #000; box-shadow: 0px 1px 1px #000; }
-					p a:hover{ background-color:#427cb4; border-color:#5c94cb; color:#fff; }
-			h3{ padding:30px 30px 20px 30px; }
-			
-			#content{ position:absolute; top:50px; left:50px; background:#111; background:rgba(0,0,0,0.65); width:360px; text-align:left; }
-			.stamp{ float: right; margin: 15px 30px 0 0;}
+
+    p{ padding:0 30px 30px 30px; color:#fff; font:11pt "Helvetica Neue", "Helvetica", Arial, sans-serif; text-shadow: #000 0px 1px 0px; line-height:200%; }
+    p a{ font-size:10pt; text-decoration:none; outline: none; color:#ddd; background:#222; border-top:1px solid #333; padding:5px 8px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; -moz-box-shadow: 0px 1px 1px #000; -webkit-box-shadow: 0px 1px 1px #000; box-shadow: 0px 1px 1px #000; }
+    p a:hover{ background-color:#427cb4; border-color:#5c94cb; color:#fff; }
+    h3{ padding:30px 30px 20px 30px; }
+    h2{ padding:30px 30px 20px 30px; }
+
+    #content{ position:absolute; top:50px; left:50px; background:#111; background:rgba(0,0,0,0.65); width:360px; text-align:left; }
+    .stamp{ float: right; margin: 15px 30px 0 0;}
 			
 	</style>
 	
@@ -86,12 +82,8 @@
 <body>
 
 	<div id="content">
-		<h3><a href="http://www.buildinternet.com" ><img src="supersized/flickr/img/buildinternet-logo.png"/></a></h3>
-		<p>
-			From the Nonsense Society Flickr Pool<br/>
-			<a href="http://www.nonsensesociety.com" alt="Nonsense Society" target="_blank">Nonsense Society</a>
-			<a href="http://flickr.com/groups/nonsensesociety/" alt="Flickr Pool" target="_blank">Flickr Pool</a>
-		</p>
+		<h2>Welcome to my PhotoBlog</h2>
+		<p></p>
 	</div>
 
 <div id="prevthumb"></div>
