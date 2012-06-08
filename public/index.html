@@ -15,6 +15,8 @@
 	<script type="text/javascript">
 	
 		jQuery(function($){
+        var tags = getParameterByName('tag');
+        var actualTag = tags?  tags: 'abotoli..com';
 			$.supersized({
 			
 				//Functionality
@@ -51,7 +53,8 @@
 				set                     :   '72157627855873194', 				//Flickr set ID (found in URL)
 				user					:	'68273482@N07',				//Flickr user ID (http://idgettr.com/)
 				group					:	'######', 				//Flickr group ID (http://idgettr.com/)
-				tags			: 'abotoli.com',    //Comma separated tags
+				tags			: actualTag,    //Comma separated tags
+				//tags			: 'abotoli.com',    //Comma separated tags
 				total_slides			:	500,					//How many pictures to pull (Between 1-500)
 				image_size              :   'z', 					//Flickr Image Size - t,s,m,z,b  (Details: http://www.flickr.com/services/api/misc.urls.html)
 				sort_by			:    1,		//1-Date Posted, 2-Date Taken, 3-Interestingness
@@ -59,9 +62,17 @@
 				
 				api_key					:	'961bf593e73a92a250e83d11c6b30530'		//Flickr API Key
 					
-			}); 
-		});
-		
+      }); 
+    });
+
+    function getParameterByName(name) {
+      var match = RegExp('[?&]' + name + '=([^&]*)')
+        .exec(window.location.search);
+      return match ?
+        decodeURIComponent(match[1].replace(/\+/g, ' '))
+        : null;
+    }
+
 	</script>
 	
 	<style type="text/css">
@@ -69,10 +80,16 @@
     p{ padding:0 30px 30px 30px; color:#fff; font:11pt "Helvetica Neue", "Helvetica", Arial, sans-serif; text-shadow: #000 0px 1px 0px; line-height:200%; }
     p a{ font-size:10pt; text-decoration:none; outline: none; color:#ddd; background:#222; border-top:1px solid #333; padding:5px 8px; -moz-border-radius:3px; -webkit-border-radius:3px; border-radius:3px; -moz-box-shadow: 0px 1px 1px #000; -webkit-box-shadow: 0px 1px 1px #000; box-shadow: 0px 1px 1px #000; }
     p a:hover{ background-color:#427cb4; border-color:#5c94cb; color:#fff; }
-    h3{ padding:30px 30px 20px 30px; }
-    h2{ padding:30px 30px 20px 30px; }
+    #content{ padding:30px 30px 20px 30px; }
+    h2{  color:#fff;font-size:20pt; font-style:italic;}
 
     #content{ position:absolute; top:50px; left:50px; background:#111; background:rgba(0,0,0,0.65); width:360px; text-align:left; }
+    #content li {list-style-type:none;}
+    #content {color:#FFFFFF;}      
+    #content a:link {color:#FFFFFF;}      
+    #content a:visited {color:#FFFFFF;}
+    #content a:hover {color:#FFFFFF;}
+    #content a:active {color:#FFFFFF;}
     .stamp{ float: right; margin: 15px 30px 0 0;}
 			
 	</style>
@@ -82,9 +99,15 @@
 <body>
 
 	<div id="content">
-		<h2>Welcome to my PhotoBlog</h2>
-		<p></p>
-	</div>
+    <h2><a href="index.html">Abotoli's PhotoBlog</a></h2>
+    <p>
+    <ul>
+      <li><a href="index.html?tag=Flower">Flower</a></li>
+      <li><a href="index.html?tag=ToughMudder">Tough Mudder</a></li>
+      <li><a href="index.html?tag=Misc">Misc</a></li>
+    </ul>
+    </p>
+  </div>
 
 <div id="prevthumb"></div>
 <div id="nextthumb"></div>
